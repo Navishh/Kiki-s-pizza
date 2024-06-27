@@ -50,7 +50,8 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <footer>
+      <footer className=" border-t p-8 text-center text-gray-500 mt-16">
+        &copy; 2024 Kiki Pizza. All rights reserved.
         
       </footer>
     </>
