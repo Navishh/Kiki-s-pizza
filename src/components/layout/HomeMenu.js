@@ -1,5 +1,5 @@
-import Image from "next/image";
-import MenuCard from "../homepagemenu/pizzacard/page";
+import Image from 'next/image';
+import MenuCard from '../homepagemenu/pizzacard/page';
 import SectionHeader from "./SectionHeaders";
 
 export default function HomeMenu() {

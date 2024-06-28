@@ -1,5 +1,5 @@
-import Header from "@/components/layout/Header";
 import { Roboto } from "next/font/google";
+import Header from "../components/layout/Header";
 import "./globals.css";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
@@ -14,12 +14,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={roboto.className}>
         <main className=" max-w-7xl p-4 mx-auto">
-        <Header />
-        {children}
-        <footer className=" border-t p-8 text-center text-gray-500 mt-16">
-        &copy; 2024 Kiki Pizza. All rights reserved.
-        
-      </footer>
+          <Header/>
+          {children}
+          <footer className=" border-t p-8 text-center text-gray-500 mt-16">
+            &copy; 2024 Kiki Pizza. All rights reserved.
+          </footer>
         </main>
       </body>
     </html>
