@@ -1,17 +1,18 @@
-import { Schema, model, models } from "mongoose";
-import Error from "next/error";
+import mongoose from "mongoose";
 
-const UserSchema = new Schema({
-  email: { type: String, required: true, unique: true },
-  password: {
-    type: String,
-    required: true,
-    validate: (pass) => {
-      if (!pass?.length || pass.length < 5) {
-        new Error(" Password must be at least 5 characters long");
+const UserSchema = new mongoose.Schema(
+  {
+    email: { type: String, required: true, unique: true },
+    password: {
+      type: String,
+      required: true,
+      validate: {
+        validator: (pass) => pass.length >= 5,
+        message: 'Password must be at least 5 characters long'
       }
     },
   },
-}, { timestamps: true });
+  { timestamps: true }
+);
 
-export const User = models?.User || model("User", UserSchema);
+export const User = mongoose.models.User || mongoose.model('User', UserSchema);
