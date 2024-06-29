@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import RightArrow from "../icons/rightarrow";
 
